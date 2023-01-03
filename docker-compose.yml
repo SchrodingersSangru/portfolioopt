@@ -2,9 +2,14 @@ version: "3"
 services:
   streamlit:
     build: .
+      # dockerfile: ./dockerfile
+      # context: ./
+    image : quantum_portfolio:latest
     command: "streamlit run portfolio_opt-final/portfolio_dashboard.py"
     ports:
       - "8501:8501"
     volumes:
-      # - "./src:/usr/src/app/src"
-      - "./hackathon-portfolio/portfolio_opt-final/portfolio_dashboard.py"
+      - "/home/sangram/Downloads/hackathon-portfolio/portfolio_opt-final/portfolio_dashboard.py"
+      # - "./hackathon-portfolio/portfolio_opt-final/portfolio_dashboard.py"
+
+
