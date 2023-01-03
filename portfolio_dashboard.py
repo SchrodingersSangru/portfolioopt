@@ -455,7 +455,7 @@ def signup():
 
 
 
-
+## python -m streamlit hello --server.port 8000 --server.address 0.0.0.0 -> use this code to test whether streamlit is up? 
 
 #Run the whole lot, we get navbar, state management and app isolation, all with this tiny amount of work.
 app.run()
