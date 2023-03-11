@@ -359,7 +359,7 @@ def portfolio_core_app():
     
         
         # holdngs_data = {"Assets":my_stocks, "Weights(%)": weights, "Money($)":allocated_money}
-        holdngs_data = {"Assets":company_names_dict.keys(), "Company Name": company_names_dict.values(), "Weights(%)": myyy_weights} 
+        holdngs_data = {"Assets":company_names_dict.keys(), "Company Name": company_names_dict.values(), "Weights(%)": np.round(myyy_weights, 2) } 
            
         # print(summary_df)
         sharpe_ratio_df = pd.DataFrame(sharpe_ratio.items(), columns=['index', 'value'])
@@ -368,9 +368,9 @@ def portfolio_core_app():
         
         allocated_money = [(investment_amount*i)/100 for i in myyy_weights]
 
-        allocated_money = np.round(allocated_money, 2)
+        # allocated_money = np.round(allocated_money, 2)
         
-        alloc_dict = dict(zip(company_names_dict.keys(), allocated_money))
+        alloc_dict = dict(zip(company_names_dict.keys(), np.round(allocated_money, 2)))
         alloc_df = pd.DataFrame(alloc_dict.items(), columns=["assets", "money"])
         
         
