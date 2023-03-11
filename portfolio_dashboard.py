@@ -413,10 +413,10 @@ def portfolio_core_app():
             st.subheader("Portfolio quality ")
             st.table(sharpe_ratio_df)
         
-        st.subheader(" Portfolio vs Index graph ")
-        chart_df = pd.concat([portfolio_data, index_data], axis=1)
+        #st.subheader(" Portfolio vs Index graph ")
+        #chart_df = pd.concat([portfolio_data, index_data], axis=1)
         # print("tyyytpppesss 0000 ", type(chart_df))
-        st.line_chart(chart_df)
+        #st.line_chart(chart_df)
         
         
         
